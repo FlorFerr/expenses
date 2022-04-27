@@ -11,7 +11,7 @@ const ExpenseForm = (props) => {
     setEnteredTitle(e.target.value)}
 
   const amountChangeHandler = (e) => {
-      setEnteredAmount(e.target.value)}
+      setEnteredAmount(Number(e.target.value))}
 
   const dateChangeHandler = (e) => {
         setEnteredDate(e.target.value)}
@@ -31,7 +31,6 @@ const ExpenseForm = (props) => {
     setEnteredAmount('')
     setEnteredDate('')
 
-    props.onCancel()
   }
 
   const cancelForm = () => {
@@ -55,7 +54,7 @@ const ExpenseForm = (props) => {
         </div>
     </div>
     <div className='new-expense__actions'>
-      <button onClick={cancelForm}>Cancelar</button>
+      <button type='button' onClick={cancelForm}>Cancelar</button>
       <button type='submit'>Agregar</button>
 
     </div>

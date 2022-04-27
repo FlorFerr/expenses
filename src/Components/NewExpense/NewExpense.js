@@ -20,6 +20,7 @@ const NewExpense = (props) => {
             id: Math.random().toString()
         }
         props.onAddExpense(expenseData)
+        setFormVisible(false)
     }
 
 
@@ -28,7 +29,7 @@ const NewExpense = (props) => {
 
       {
         formVisible ? <ExpenseForm onSave={saveHandler} onCancel={cancelHandler}/> :
-        <button onClick={formHandler}>Agregar nuevo gasto</button>
+        <button type='button' onClick={formHandler}>Agregar nuevo gasto</button>
       }
       
 
