@@ -4,18 +4,18 @@ import Chart from '../Chart/Chart'
 const ExpensesChart = (props) => {
 
     const chartDataPoints = [
-        {label: 'ene', value: 0},
-        {label: 'feb', value: 0},
-        {label: 'mar', value: 0},
-        {label: 'abr', value: 0},
-        {label: 'may', value: 0},
-        {label: 'jun', value: 0},
-        {label: 'jul', value: 0},
-        {label: 'ago', value: 0},
-        {label: 'sep', value: 0},
-        {label: 'oct', value: 0},
-        {label: 'nov', value: 0},
-        {label: 'dic', value: 0},
+        {label: 'ENE', value: 0},
+        {label: 'FEB', value: 0},
+        {label: 'MAR', value: 0},
+        {label: 'ABR', value: 0},
+        {label: 'MAY', value: 0},
+        {label: 'JUN', value: 0},
+        {label: 'JUL', value: 0},
+        {label: 'AGO', value: 0},
+        {label: 'SEP', value: 0},
+        {label: 'OCT', value: 0},
+        {label: 'NOV', value: 0},
+        {label: 'DIC', value: 0},
     ]
 
     // ?????? 
