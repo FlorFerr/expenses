@@ -10,6 +10,10 @@ const NewExpense = (props) => {
       setFormVisible(true)
     }
 
+    const cancelHandler = () => {
+      setFormVisible(false)
+    }
+
     const saveHandler = (enteredExpenseData) => {
         const expenseData = {
             ...enteredExpenseData,
@@ -23,7 +27,7 @@ const NewExpense = (props) => {
     <div className='new-expense'>
 
       {
-        formVisible ? <ExpenseForm onSave={saveHandler}/> :
+        formVisible ? <ExpenseForm onSave={saveHandler} onCancel={cancelHandler}/> :
         <button onClick={formHandler}>Agregar nuevo gasto</button>
       }
       
