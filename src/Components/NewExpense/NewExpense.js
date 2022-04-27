@@ -1,20 +1,34 @@
 import './NewExpense.css';
 import ExpenseForm from './ExpenseForm'
+import { useState } from 'react';
 
 const NewExpense = (props) => {
+
+    const [formVisible, setFormVisible] = useState(false)
+
+    const formHandler = () =>{
+      setFormVisible(true)
+    }
 
     const saveHandler = (enteredExpenseData) => {
         const expenseData = {
             ...enteredExpenseData,
             id: Math.random().toString()
         }
-
-        //console.log(expenseData)
         props.onAddExpense(expenseData)
     }
+
+
   return (
     <div className='new-expense'>
-        <ExpenseForm onSave={saveHandler}/>
+
+      {
+        formVisible ? <ExpenseForm onSave={saveHandler}/> :
+        <button onClick={formHandler}>Agregar nuevo gasto</button>
+      }
+      
+
+        
     </div>
   )
 }
