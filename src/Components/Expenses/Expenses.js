@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 const Expenses = ({ items }) => {
 
-  const [filteredYear, setFilteredYear] = useState('2021')
+  const [filteredYear, setFilteredYear] = useState('2022')
 
   const filterHandler = (selectedYear) => {
     setFilteredYear(selectedYear)
