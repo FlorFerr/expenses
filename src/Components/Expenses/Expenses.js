@@ -13,16 +13,16 @@ const Expenses = ({ items }) => {
   }
 
   const filteredExpenses = items.filter(expense => expense.date.getFullYear().toString() === filteredYear)
-  console.log(filteredExpenses)
+
 
   return (
     <Card className='expenses'>
       <ExpensesFilter selected={filteredYear} onChangeFilter = {filterHandler} />
 
-      {items.length > 0 ?
+      {filteredExpenses.length > 0 ?
 
-    items.map(i =><ExpenseItem key={i.id}title={i.title} amount={i.amount} date={i.date}/>) 
-    : <h2>No hay gastos</h2>
+    filteredExpenses.map(i =><ExpenseItem key={i.id}title={i.title} amount={i.amount} date={i.date}/>) 
+    : <h2 className='expenses-fallback'>No hay gastos en el año {filteredYear}</h2>
     
       }
     </Card>
