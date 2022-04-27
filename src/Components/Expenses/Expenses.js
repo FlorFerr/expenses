@@ -12,6 +12,9 @@ const Expenses = ({ items }) => {
     setFilteredYear(selectedYear)
   }
 
+  const filteredExpenses = items.filter(expense => expense.date.getFullYear().toString() === filteredYear)
+  console.log(filteredExpenses)
+
   return (
     <Card className='expenses'>
       <ExpensesFilter selected={filteredYear} onChangeFilter = {filterHandler} />
